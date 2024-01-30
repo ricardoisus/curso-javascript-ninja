@@ -10,7 +10,7 @@ para o contrário.
 var isTruthy = function(a){
 if(a) {return true} else
 {return false}
-}
+};
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 isTruthy(undefined)
@@ -41,7 +41,16 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-var carro = {marca:'VW', modelo:'T-cross', placa:'LkX4784', ano:2024, cor:'Azul',quantasPortas:4, assentos:5, quantidadePessoas:0}
+var carro = {
+    marca:'VW',
+    modelo:'T-cross',
+    placa:'LkX4784',
+    ano:2024,
+    cor:'Azul',
+    quantasPortas:4,
+    assentos:5,
+    quantidadePessoas:0
+}
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
@@ -78,7 +87,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function(){
-return "Esse carro é um " + carro.marca + carro.modelo
+return "Esse carro é um " + carro.obterMarca() + " " + carro.obterModelo()
 }
 
 /*
@@ -97,17 +106,23 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-var carro.adicionarPessoas = function(a){
+carro.adicionarPessoas = function(a){
 var assentosRestantes = carro.assentos - carro.quantidadePessoas;
-if(a > assentosRestantes){
+if(a <= assentosRestantes){
   carro.quantidadePessoas = carro.quantidadePessoas + a;
-  if(carro.quantidade de pessoas = 5){
-    return "O carro já está lotado!"
-    } else {
-    return "Já temos " carro.quantidadePessoas " pessoas no  carro!"}
-  } else {
-    if(assentosRestantes = 1){
-      return "Só cabe mais "+ assentosRestantes + " pessoa!"} else{
+  function verificaVaga(){
+    if(carro.quantidadePessoas === 5){
+        return "O carro já está lotado!"
+        } else if(carro.quantidadePessoas === 1){
+        return "Já temos " + carro.quantidadePessoas + " pessoa no carro!"
+        } else {
+        return "Já temos " + carro.quantidadePessoas + " pessoas no carro!"
+    }
+  }
+    return verificaVaga()}
+else {
+    if(assentosRestantes === 1){
+      return "Só cabe mais "+ assentosRestantes + " pessoa!"} else {
       return "Só cabem mais "+ assentosRestantes + " pessoas!"}
     }
 }
@@ -123,13 +138,14 @@ Qual a cor atual do carro?
 */
 carro.cor
 carro.obterCor()
+//Azul
 
 // Mude a cor do carro para vermelho.
 carro.mudaCor('vermelho')
 
 // E agora, qual a cor do carro?
 carro.obterCor()
-
+// vermelho
 // Mude a cor do carro para verde musgo.
 carro.mudaCor('verde musgo')
 
@@ -137,26 +153,32 @@ carro.mudaCor('verde musgo')
 // E agora, qual a cor do carro?
 carro.obterCor()
 carro.cor
+//verde musgo
 
 // Qual a marca e modelo do carro?
-carro.obterMarca()
+carro.obterMarcaModelo()
 
 // Adicione 2 pessoas no carro.
 carro.adicionarPessoas(2)
+// Já temos 2 pesosas no carro!
 
 // Adicione mais 4 pessoas no carro.
 carro.adicionarPessoas(4)
+//Só cabem mais 3 pessoas!
 
 // Faça o carro encher.
 carro.adicionarPessoas(3)
+//O carro já está lotado!
 
 // Tire 4 pessoas do carro.
 carro.adicionarPessoas(-4)
+//Já temos 1 pessoa no carro!.
 
 // Adicione 10 pessoas no carro.
 carro.adicionarPessoas(10)
-
+//Só cabem mais 4 pessoas!
 
 // Quantas pessoas temos no carro?
 carro.quantidadePessoas
+//1
 ```
