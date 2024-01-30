@@ -10,6 +10,7 @@ para o contrário.
 var isTruthy = function(a){
 if(a) {return true} else
 {return false}
+}
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 isTruthy(undefined)
