@@ -121,38 +121,42 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.cor
+carro.obterCor()
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudaCor('vermelho')
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor()
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudaCor('verde musgo')
+
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor()
+carro.cor
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMarca()
 
 // Adicione 2 pessoas no carro.
-?
+carro.adicionarPessoas(2)
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarPessoas(4)
 
 // Faça o carro encher.
-?
+carro.adicionarPessoas(3)
 
 // Tire 4 pessoas do carro.
-?
+carro.adicionarPessoas(-4)
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas(10)
+
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas
 ```
