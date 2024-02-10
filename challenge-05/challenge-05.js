@@ -55,16 +55,13 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-  function book(a){
+  function book(nomeLivro){
     var livro = {
     livro1: { quantidadeDePaginas:10, autor: 'da2k', editora: 'ninja'} ,
     livro2: { quantidadeDePaginas:20, autor: 'Ricardo', editora: 'Jaraguá'},
     livro3: { quantidadeDePaginas:30, autor: 'Caroline', editora: 'Blumenau'}
     };
-    if(livro[a] == undefined){
-      return livro;
-    } {
-      return a == undefined ? livro : livro[a];}
+    return nomeLivro === undefined ? livro : livro[nomeLivro];
   }
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
