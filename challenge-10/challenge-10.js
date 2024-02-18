@@ -14,11 +14,8 @@
     five = Number(five)
     console.log( five + ' é número?', typeof five === 'number' );
 
-    var a = 10
-    var b = 10
-    a = String(a)
-    b = String(b)
-    var concat = b + a;
+
+    var concat = 10 + String(10);
     console.log( '"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string' );
 
     /*
